@@ -1,13 +1,13 @@
 ##Installing Deploy agent in Ubuntu 20##
 
 sudo apt update
-sudo apt install ruby-full
-sudo apt install wget
+sudo apt install ruby-full -y
+sudo apt install wget -y
 cd /home/ubuntu 
 wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
 chmod +x ./install
 sudo ./install auto > /tmp/logfile
-sudo apt install awscli
+sudo apt install awscli -y
 aws s3 ls s3://aws-codedeploy-us-east-1/releases/ | grep '\.deb$'
 sudo service codedeploy-agent status
 sudo service codedeploy-agent restart
