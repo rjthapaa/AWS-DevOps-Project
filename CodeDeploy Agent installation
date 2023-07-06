@@ -30,3 +30,24 @@ sudo service codedeploy-agent status
 
 refer
 https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html
+
+
+## For Centos & Amazon Linux 2 ##
+sudo yum update
+sudo yum install ruby
+sudo yum install wget
+wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+sudo service codedeploy-agent status
+
+## For Ubuntu & Debian Based ##
+sudo apt-get update
+sudo apt-get install ruby
+
+sudo apt-get install wget
+cd /home/ubuntu
+wget https://aws-codedeploy-ca-central-1.s3.ca-central-1.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+sudo service codedeploy-agent status
